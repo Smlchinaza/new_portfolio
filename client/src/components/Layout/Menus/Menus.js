@@ -17,7 +17,10 @@ const Menus = ({ toggle }) => {
       {toggle ? (
         <>
           <div className="navbar-profile-pic">
-            <img src="" alt="profile pic" />
+            <img
+              src="https://github.com/Smlchinaza/new_portfolio/blob/main/client/assets/profile-pic.jpg?raw=true"
+              alt="profile pic"
+            />
           </div>
 
           <div className="nav-items">
