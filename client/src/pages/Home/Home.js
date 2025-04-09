@@ -15,6 +15,7 @@ const Home = () => {
                 strings: [
                   "Chukwuemeka, Samuel",
                   "A Full Stack Web Developer",
+                  "A MERN Stack Developer",
                   "A Software Engineer",
                 ],
                 autoStart: true,
