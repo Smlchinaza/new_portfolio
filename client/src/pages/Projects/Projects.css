@@ -30,7 +30,7 @@
   font-size: 14px;
 }
 
-.card img {
+.project .card img {
   height: 150px;
   width: 100%;
 }
@@ -55,7 +55,7 @@
   color: white;
 }
 
-.card:hover {
+.project .card:hover {
   background-color: white;
   border-radius: 4px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,

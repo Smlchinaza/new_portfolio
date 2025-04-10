@@ -1,0 +1,117 @@
+/* ======== CONTACT SECTION LAYOUT ======== */
+.contact-section {
+  margin-left: 140px;
+  margin-bottom: 60px; /* Fixed typo: "buttom" -> "bottom" */
+  padding-top: 50px;
+}
+
+.contact-container {
+  box-shadow: 0 4px 8px rgba(117, 117, 117, 0.5);
+  border-radius: 0;
+}
+
+/* ======== IMAGE CONTAINER ======== */
+.contact-image-container .contact-image {
+  padding: 30px;
+  margin-top: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.border-line {
+  border-right: 1px solid #e0e0e0;
+}
+
+/* ======== FORM CONTAINER ======== */
+.contact-form-wrapper {
+  /* border: 1px solid red; */
+  margin: 0 10px;
+}
+
+/* Form divider styling */
+.divider-container {
+  /* border: 1px solid red; */
+  position: relative;
+  text-align: center;
+}
+
+.divider-line {
+  /* border: 1px solid red; */
+  display: inline-block;
+  height: 1px;
+  width: 45%;
+  background-color: #e0e0e0;
+  margin-top: 10px;
+}
+
+.divider-text {
+  /* display: inline-block; */
+  display: flex;
+  width: 10%;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
+/* ======== FORM ELEMENTS ======== */
+/* Input fields */
+input,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  margin-top: 5px;
+  width: 100%;
+  color: #138781;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Placeholder text */
+::placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+  font-weight: 300;
+}
+
+/* Focus states */
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  outline: 1px solid #138781 !important;
+  outline-width: 0;
+}
+
+button:focus {
+  box-shadow: none;
+  outline-width: 0;
+}
+
+/* ======== BUTTON STYLING ======== */
+.submit-button {
+  background-color: #1e1e2c;
+  color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #000;
+  color: white;
+}
+
+/* ======== RESPONSIVE ADJUSTMENTS ======== */
+@media (max-width: 768px) {
+  .contact-section {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+
+  .contact-form-wrapper {
+    margin: 0 20px;
+  }
+}
