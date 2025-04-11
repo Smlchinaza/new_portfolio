@@ -8,7 +8,7 @@ import {
   FcBiotech,
   FcReadingEbook,
   FcVideoProjector,
-  FcVoicePresentation,
+  // FcVoicePresentation,
   FcBusinessContact,
 } from "react-icons/fc";
 

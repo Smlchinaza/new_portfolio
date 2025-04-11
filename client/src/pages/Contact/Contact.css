@@ -1,13 +1,11 @@
 /* ======== CONTACT SECTION LAYOUT ======== */
-.contact-section {
-  margin-left: 140px;
-  margin-bottom: 60px; /* Fixed typo: "buttom" -> "bottom" */
-  padding-top: 50px;
-}
 
 .contact-container {
   box-shadow: 0 4px 8px rgba(117, 117, 117, 0.5);
-  border-radius: 0;
+  border-radius: 10px;
+  margin-left: 140px;
+  margin-bottom: 60px; /* Fixed typo: "buttom" -> "bottom" */
+  padding-top: 50px;
 }
 
 /* ======== IMAGE CONTAINER ======== */
@@ -114,4 +112,32 @@ button:focus {
   .contact-form-wrapper {
     margin: 0 20px;
   }
+}
+
+/* Dark Mode */
+#dark .card {
+  background-color: #1e1e2c;
+  color: #f4eee0;
+}
+#dark .contact-section {
+  background-color: #1e1e2c;
+  color: #f4eee0;
+}
+#dark .submit-button {
+  background-color: #3b8ff3;
+  color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#dark .submit-button:hover {
+  background-color: #f29f67;
+  color: white;
+}
+#dark .divider-line {
+  background-color: #f4eee0;
 }

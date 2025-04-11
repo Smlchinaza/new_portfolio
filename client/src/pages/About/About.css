@@ -29,3 +29,19 @@
   text-align: justify;
   padding: 20px;
 }
+
+/* Dark mode  */
+#dark .about {
+  bod-shadow: none;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+#dark .about-content h1 {
+  color: #f4eee0;
+  border-bottom: 2px solid #f4eee0;
+}
+#dark .about-content p {
+  color: #f4eee0;
+  text-align: justify;
+  padding: 20px;
+}
