@@ -6,7 +6,7 @@ import Resume from "../../assets/docs/Resume.pdf";
 const Home = () => {
   return (
     <>
-      <div className="container-fluid home-container">
+      <div className="container-fluid home-container" id="home">
         <div className="container home-content">
           <h2>Hi👋 I am</h2>
           <h1>

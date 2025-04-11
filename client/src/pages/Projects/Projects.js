@@ -4,7 +4,7 @@ import "./Projects.css";
 const Projects = () => {
   return (
     <>
-      <div className="container project">
+      <div className="container project" id="projects">
         <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
           TOP PROJECTS
         </h2>
