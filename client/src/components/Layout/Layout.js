@@ -1,22 +1,21 @@
-import React from "react";
-import { useState } from "react";
-import Home from "../../pages/Home/Home.js";
+import React, { useState } from "react";
+import Home from "../../pages/Home/Home";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import "./Layout.css";
-import Menus from "./Menus/Menus.js";
+import Menus from "./Menus/Menus";
 
 const Layout = () => {
-  const [toggle, SetToggle] = useState(true);
+  const [toggle, setToggle] = useState(true);
 
-  //   change toggle function
+  //change toggle
   const handleToggle = () => {
-    SetToggle(!toggle);
+    setToggle(!toggle);
   };
   return (
     <>
       <div className="sidebar-section">
-        <div className={toggle ? "sidebar-toggle" : "sidebar"}>
-          <div className="sidebar-toggle-icon">
+        <div className={toggle ? "sidebar-toggle sidebar" : "sidebar"}>
+          <div className="sidebar-toggle-icons">
             <p onClick={handleToggle}>
               {toggle ? (
                 <AiOutlineDoubleLeft size={30} />

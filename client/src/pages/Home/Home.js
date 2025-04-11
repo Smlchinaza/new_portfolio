@@ -16,7 +16,6 @@ const Home = () => {
     <>
       {/* Main container for the home section */}
       <div className="container-fluid home-container" id="home">
-        {/* Theme toggle button */}
         <div className="theme-btn" onClick={handleTheme}>
           {theme === "light" ? (
             <WiMoonAltThirdQuarter size={30} />
