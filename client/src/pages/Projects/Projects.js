@@ -18,19 +18,19 @@ const Projects = () => {
               <div className="card-image">
                 <span className="card-notify-badge">Satoshi AI Website</span>
                 <img
-                  src="https://github.com/Smlchinaza/new_portfolio/blob/main/client/src/assets/images/profile-pic.jpg?raw=true"
-                  alt="project1"
+                  src="https://github.com/Smlchinaza/new_portfolio/blob/main/client/src/assets/images/satoshi.png?raw=true"
+                  alt="satoshi ai website"
                 />
               </div>
               <div className="card-image-overly m-auto mt-3">
-                <span className="card-detail-badge">HTML</span>
-                <span className="card-detail-badge">CSS</span>
+                <span className="card-detail-badge">React</span>
+                <span className="card-detail-badge">Tailwind CSS</span>
                 <span className="card-detail-badge">JavaScript</span>
                 <span className="card-detail-badge">Vercel</span>
               </div>
               <div className="card-body text-center">
                 <div className="ad-title m-auto">
-                  <h4 className="text-uppercase">Quiz App</h4>
+                  <h4 className="text-uppercase">Satoshi AI Website</h4>
                   {/* <p>Quiz App is a simple quiz application.</p> */}
                 </div>
                 <a className="ad-btn" href="https://satoshi-vision.vercel.app/">
@@ -42,24 +42,24 @@ const Projects = () => {
           <div className="col-md-4">
             <div className="card rounded">
               <div className="card-image">
-                <span className="card-notify-badge">Satoshi AI Website</span>
+                <span className="card-notify-badge">Portfolio Website</span>
                 <img
-                  src="https://github.com/Smlchinaza/new_portfolio/blob/main/client/src/assets/images/profile-pic.jpg?raw=true"
-                  alt="project1"
+                  src="https://github.com/Smlchinaza/new_portfolio/blob/main/client/src/assets/images/portfolio.png?raw=true"
+                  alt="portfolio website"
                 />
               </div>
               <div className="card-image-overly m-auto mt-3">
-                <span className="card-detail-badge">HTML</span>
-                <span className="card-detail-badge">CSS</span>
-                <span className="card-detail-badge">JavaScript</span>
-                <span className="card-detail-badge">Vercel</span>
+                <span className="card-detail-badge">ReactJs</span>
+                <span className="card-detail-badge">Tailwind CSS</span>
+                <span className="card-detail-badge">NodeJs</span>
+                <span className="card-detail-badge">ExpressJs</span>
               </div>
               <div className="card-body text-center">
                 <div className="ad-title m-auto">
-                  <h4 className="text-uppercase">Quiz App</h4>
+                  <h4 className="text-uppercase">Portfolio Website</h4>
                   {/* <p>Quiz App is a simple quiz application.</p> */}
                 </div>
-                <a className="ad-btn" href="https://satoshi-vision.vercel.app/">
+                <a className="ad-btn" href="https://new-portfolio-opal-omega.vercel.app/">
                   view
                 </a>
               </div>
@@ -68,24 +68,23 @@ const Projects = () => {
           <div className="col-md-4">
             <div className="card rounded">
               <div className="card-image">
-                <span className="card-notify-badge">Satoshi AI Website</span>
+                <span className="card-notify-badge">social-scribe-waitlist</span>
                 <img
-                  src="https://github.com/Smlchinaza/new_portfolio/blob/main/client/src/assets/images/profile-pic.jpg?raw=true"
-                  alt="project1"
+                  src="https://github.com/Smlchinaza/new_portfolio/blob/main/client/src/assets/images/Landig%20Page.jpg?raw=true"
+                  alt="social-scribe-waitlist"
                 />
               </div>
               <div className="card-image-overly m-auto mt-3">
-                <span className="card-detail-badge">HTML</span>
-                <span className="card-detail-badge">CSS</span>
-                <span className="card-detail-badge">JavaScript</span>
+                <span className="card-detail-badge">NextJs</span>
+                <span className="card-detail-badge">TypeScript</span>
                 <span className="card-detail-badge">Vercel</span>
               </div>
               <div className="card-body text-center">
                 <div className="ad-title m-auto">
-                  <h4 className="text-uppercase">Quiz App</h4>
+                  <h4 className="text-uppercase">Waitlist Page</h4>
                   {/* <p>Quiz App is a simple quiz application.</p> */}
                 </div>
-                <a className="ad-btn" href="https://satoshi-vision.vercel.app/">
+                <a className="ad-btn" href="https://social-scribe-waitlist-launch.vercel.app/">
                   view
                 </a>
               </div>

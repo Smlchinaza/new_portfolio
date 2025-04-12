@@ -19,27 +19,27 @@ const Education = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "white", color: "black" }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
-            date="2020 - 2022"
+            date="2023 - 2024"
             iconStyle={{ background: "#138781", color: "#fff" }}
             icon={<MdSchool />}
           >
-            <h3 className="vertical-timeline-element-title">MCA</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              IIT Mumbai, IN
-            </h4>
+            <h3 className="vertical-timeline-element-title">Software Engineering</h3>
+            <h5 className="vertical-timeline-element-subtitle">
+            ALX Africa 
+            </h5>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "white", color: "black" }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
-            date="2017 - 2020"
+            date="2015 - 2022"
             iconStyle={{ background: "#138781", color: "#fff" }}
             icon={<MdSchool />}
           >
-            <h3 className="vertical-timeline-element-title">BCA</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              IIT Mumbai, IN
-            </h4>
+            <h3 className="vertical-timeline-element-title">B.Sc</h3>
+            <h5 className="vertical-timeline-element-subtitle">
+              University of Nigeria, Nsukka
+            </h5>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
