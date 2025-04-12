@@ -1,8 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import "./Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [status, setStatus] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const socialLinks = {
+    linkedin: "https://www.linkedin.com/in/samuel500/",
+    github: "https://github.com/Smlchinaza",
+    facebook: "https://www.facebook.com/chinaza.samuel.37"
+  };
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+    
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ""
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setStatus("sending");
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setErrors({});
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
     <>
       {/* <div className=" contact-section" > */}
@@ -22,16 +108,22 @@ const Contact = () => {
           </div>
 
           {/* Right side - Contact Form */}
-          <div className="col-lg-6 col-md-6">
+          <div className="col-md-6 col-lg-6 col-xl-6 col-sm-12">
             <div className="contact-form-wrapper board-0 px-4 py-3">
               <div className="row contact-form-container">
                 {/* Header */}
                 <div className="row form-header">
                   <h6>
                     Contact with{" "}
-                    <BsLinkedin color="blue" size={30} className="ms-2" />
-                    <BsGithub color="black" size={30} className="ms-2" />
-                    <BsFacebook color="blue" size={30} className="ms-2" />
+                    <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
+                      <BsLinkedin color="blue" size={30} className="ms-2" />
+                    </a>
+                    <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="social-link">
+                      <BsGithub color="black" size={30} className="ms-2" />
+                    </a>
+                    <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="social-link">
+                      <BsFacebook color="blue" size={30} className="ms-2" />
+                    </a>
                   </h6>
                 </div>
 
@@ -43,16 +135,18 @@ const Contact = () => {
                 </div>
 
                 {/* Contact Form */}
-                <form className="row contact-form">
+                <form onSubmit={handleSubmit}>
                   {/* Name Field */}
                   <div className="form-group px-3">
                     <input
                       type="text"
                       name="name"
                       placeholder="Enter your name"
-                      className="form-control mb-3"
-                      required
+                      className={`form-control mb-1 ${errors.name ? 'is-invalid' : ''}`}
+                      value={formData.name}
+                      onChange={handleChange}
                     />
+                    {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                   </div>
 
                   {/* Email Field */}
@@ -61,9 +155,11 @@ const Contact = () => {
                       type="email"
                       name="email"
                       placeholder="Enter your email"
-                      className="form-control mb-3"
-                      required
+                      className={`form-control mb-1 ${errors.email ? 'is-invalid' : ''}`}
+                      value={formData.email}
+                      onChange={handleChange}
                     />
+                    {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                   </div>
 
                   {/* Message Field */}
@@ -71,16 +167,34 @@ const Contact = () => {
                     <textarea
                       name="message"
                       placeholder="Write your message"
-                      className="form-control mb-3"
+                      className={`form-control mb-1 ${errors.message ? 'is-invalid' : ''}`}
                       rows="4"
-                      required
+                      value={formData.message}
+                      onChange={handleChange}
                     />
+                    {errors.message && <div className="invalid-feedback">{errors.message}</div>}
                   </div>
+
+                  {/* Status Message */}
+                  {status === "success" && (
+                    <div className="alert alert-success mx-3">
+                      Message sent successfully!
+                    </div>
+                  )}
+                  {status === "error" && (
+                    <div className="alert alert-danger mx-3">
+                      Failed to send message. Please try again.
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <div className="form-group px-3">
-                    <button type="submit" className="submit-button">
-                      SEND MESSAGE
+                    <button 
+                      type="submit" 
+                      className="submit-button"
+                      disabled={status === "sending"}
+                    >
+                      {status === "sending" ? "Sending..." : "SEND MESSAGE"}
                     </button>
                   </div>
                 </form>

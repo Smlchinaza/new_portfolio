@@ -26,7 +26,7 @@ function App() {
           <Contact />
         </div>
         <div className="footer pb-3 ms-3">
-          <h5 className="text-center">Made With ❤️ by samchuks &copy; 2025</h5>
+          <h6 className="text-center">Made With ❤️ by samchuks &copy; 2025</h6>
         </div>
       </div>
       <ScrollToTop

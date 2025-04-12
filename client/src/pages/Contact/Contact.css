@@ -300,3 +300,60 @@ button:focus {
 #dark ::placeholder {
   color: #999;
 }
+
+/* Status Messages */
+.alert {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Disabled Button */
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Form Validation */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Social Media Links */
+.social-link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+}
+
+.social-link:active {
+  transform: translateY(0);
+}
+
+/* Dark mode social links */
+#dark .social-link {
+  color: #f4eee0;
+}
