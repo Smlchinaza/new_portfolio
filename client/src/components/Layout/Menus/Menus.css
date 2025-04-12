@@ -1,3 +1,4 @@
+/* Base styles (applied to all device sizes) */
 .navbar-profile-pic img {
   border-radius: 90px;
   height: 150px;
@@ -6,19 +7,19 @@
   border: 2px solid #f29f67;
   vertical-align: middle;
   margin: 0 auto;
-  /* margin-top: 10px; */
 }
 
 .nav-item {
   color: white;
   margin-top: 20px;
-  /* text-align: center; */
   margin-left: 20px;
 }
 
 .nav-link {
   margin-top: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link svg {
@@ -35,4 +36,32 @@
   border-left: 5px solid #f29f67;
   padding-left: 10px;
   text-decoration: none;
+}
+
+/* Desktop styles (992px and above) */
+@media screen and (min-width: 992px) {
+  .navbar-profile-pic img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .nav-item {
+    margin-left: 20px;
+  }
+}
+
+/* Tablet styles (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-profile-pic img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .nav-item {
+    margin-left: 15px;
+  }
+
+  .nav-link svg {
+    margin-right: 8px;
+  }
 }
