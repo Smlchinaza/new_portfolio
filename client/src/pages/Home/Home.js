@@ -45,7 +45,17 @@ const Home = () => {
 
           {/* Buttons for actions */}
           <div className="home-buttons">
-            <button className="btn btn-hire">Hire Me</button>
+            <button
+              className="btn btn-hire"
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Hire Me
+            </button>
 
             <a className="btn btn-cv" href={Resume} download="Chukwuemeka.pdf">
               My Resume
