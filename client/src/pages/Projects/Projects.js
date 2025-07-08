@@ -90,6 +90,31 @@ const Projects = () => {
               </div>
             </div>
           </div>
+          <div className="col-md-4">
+            <div className="card rounded">
+              <div className="card-image">
+                <span className="card-notify-badge">School Management Website</span>
+                <img
+                  src={require("../../assets/images/exam-software.png")}
+                  alt="school management website"
+                />
+              </div>
+              <div className="card-image-overly m-auto mt-3">
+                <span className="card-detail-badge">React</span>
+                <span className="card-detail-badge">NodeJs</span>
+                <span className="card-detail-badge">ExpressJs</span>
+                <span className="card-detail-badge">MongoDB</span>
+              </div>
+              <div className="card-body text-center">
+                <div className="ad-title m-auto">
+                  <h4 className="text-uppercase">School Management Website</h4>
+                </div>
+                <a className="ad-btn" href="https://exam-software-45ex.vercel.app/">
+                  view
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
