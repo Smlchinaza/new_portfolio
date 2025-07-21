@@ -11,122 +11,55 @@ import { useTheme } from "./Context/ThemeContext.js";
 import MobileNav from "./components/MobileNav/MobileNav.js";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
-import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const { theme } = useTheme();
-  const [showPrivacy, setShowPrivacy] = useState(false);
-  const [showTerms, setShowTerms] = useState(false);
   return (
     <>
       <div id={theme}>
         <MobileNav />
-        <Layout />
-        <div className="container">
-          <About />
-          <Education />
-          <Techstack />
-          <Projects />
-          <Work />
-          <Contact />
-        </div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Layout />
+                <div className="container">
+                  <About />
+                  <Education />
+                  <Techstack />
+                  <Projects />
+                  <Work />
+                  <Contact />
+                </div>
+              </>
+            }
+          />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+        </Routes>
         <div className="footer pb-3 ms-3">
           <h6 className="text-center">
             Made With ❤️ by samchuks &copy; 2025
             <span style={{ marginLeft: 16 }}>
-              <button
-                style={{ background: "none", border: "none", color: "#007bff", textDecoration: "underline", cursor: "pointer" }}
-                onClick={() => setShowPrivacy(true)}
+              <Link
+                to="/privacy-policy"
+                style={{ color: "#007bff", textDecoration: "underline", cursor: "pointer", background: "none", border: "none" }}
               >
                 Privacy Policy
-              </button>
+              </Link>
               <span style={{ marginLeft: 16 }}>
-                <button
-                  style={{ background: "none", border: "none", color: "#007bff", textDecoration: "underline", cursor: "pointer" }}
-                  onClick={() => setShowTerms(true)}
+                <Link
+                  to="/terms-of-service"
+                  style={{ color: "#007bff", textDecoration: "underline", cursor: "pointer", background: "none", border: "none" }}
                 >
                   Terms of Service
-                </button>
+                </Link>
               </span>
             </span>
           </h6>
         </div>
-        {showPrivacy && (
-          <div style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            background: "rgba(0,0,0,0.5)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 9999
-          }}
-            onClick={() => setShowPrivacy(false)}
-          >
-            <div style={{
-              background: "#fff",
-              borderRadius: 8,
-              maxWidth: 900,
-              width: "90%",
-              maxHeight: "90vh",
-              overflowY: "auto",
-              padding: 32,
-              position: "relative"
-            }}
-              onClick={e => e.stopPropagation()}
-            >
-              <button
-                style={{ position: "absolute", top: 16, right: 16, background: "none", border: "none", fontSize: 24, cursor: "pointer" }}
-                onClick={() => setShowPrivacy(false)}
-                aria-label="Close Privacy Policy"
-              >
-                &times;
-              </button>
-              <PrivacyPolicy />
-            </div>
-          </div>
-        )}
-        {showTerms && (
-          <div style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            background: "rgba(0,0,0,0.5)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 9999
-          }}
-            onClick={() => setShowTerms(false)}
-          >
-            <div style={{
-              background: "#fff",
-              borderRadius: 8,
-              maxWidth: 900,
-              width: "90%",
-              maxHeight: "90vh",
-              overflowY: "auto",
-              padding: 32,
-              position: "relative"
-            }}
-              onClick={e => e.stopPropagation()}
-            >
-              <button
-                style={{ position: "absolute", top: 16, right: 16, background: "none", border: "none", fontSize: 24, cursor: "pointer" }}
-                onClick={() => setShowTerms(false)}
-                aria-label="Close Terms of Service"
-              >
-                &times;
-              </button>
-              <TermsOfService />
-            </div>
-          </div>
-        )}
       </div>
       <ScrollToTop
         smooth
