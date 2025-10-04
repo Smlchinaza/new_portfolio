@@ -33,7 +33,7 @@ const Home = () => {
               options={{
                 strings: [
                   "Chukwuemeka, Samuel",
-                  "A Full-Stack Web Developer",
+                  "A Full-Stack Developer",
                   "A MERN Stack Developer",
                   "A Software Engineer",
                 ],
